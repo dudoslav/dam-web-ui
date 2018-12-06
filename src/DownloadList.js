@@ -4,7 +4,7 @@ import DownloadItem from './DownloadItem'
 export default class DownloadList extends Component {
   constructor(props) {
     super(props)
-    this.state = { downloads: [ {name: "name", current: 371, size: 500, uri: 'is.muni.cz'} ] }
+    this.state = { downloads: [] }
   }
 
   componentDidMount() {
