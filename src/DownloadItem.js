@@ -6,11 +6,13 @@ export default function DownloadItem(props) {
       <details>
         <summary>
           <span>{props.download.name}</span>
-          <button>&#x00d7;</button>
+          <button className="delete-button">&#x00d7;</button>
           <progress value={props.download.current} max={props.download.size}></progress>
         </summary>
-        <div>
-          {props.download.uri}
+        <div className="flex-container">
+          <div>URL: {props.download.uri}</div>
+          <div>SIZE: {props.download.size}</div>
+          <div>LOCATION: {props.download.path}</div>
         </div>
       </details>
     </li>
