@@ -14,6 +14,7 @@ export default class DownloadForm extends Component {
   }
 
   handleSubmit(event) {
+    fetch('/downloads', { method: 'POST', body: JSON.stringify({ uri: this.state.url }) })
     this.setState({ url: '' })
     event.preventDefault()
   }

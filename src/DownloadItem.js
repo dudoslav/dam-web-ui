@@ -7,10 +7,10 @@ export default function DownloadItem(props) {
         <summary>
           <span>{props.download.name}</span>
           <button>&#x00d7;</button>
-          <progress value={props.download.progress} max="100"></progress>
+          <progress value={props.download.current} max={props.download.size}></progress>
         </summary>
         <div>
-          DETAILS
+          {props.download.uri}
         </div>
       </details>
     </li>
