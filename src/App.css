@@ -1,32 +1,110 @@
-.App {
+:root {
+  --dark-bg-color: #4DB6AC;
+  --dark-color: white;
+
+  --darker-bg-color: #00897B;
+  --darker-color: white;
+
+  --second-bg-color: #FDD835;
+  --second-color: black;
+
+  --seconder-bg-color: #F57F17;
+  --seconder-color: black;
+}
+
+body {
   text-align: center;
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+header {
+  padding: 10px;
+  background-color: var(--dark-bg-color);
+  color: var(--dark-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header > h1 {
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  border-radius: 0;
+  border: none;
+  padding: 0 6px;
+  height: 40px;
+}
+
+input[type=text] {
+  width: 70%;
+}
+
+input[type=submit], button {
+  padding: 0 30px;
+  background-color: var(--second-bg-color);
+}
+
+input[type=submit]:active, button:active {
+  background-color: var(--seconder-bg-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 40px;
+  padding: 0;
+}
+
+li {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 40px;
+}
+
+details {
+  background-color: #eeeeee;
+}
+
+details > summary {
+  text-align: left;
+  list-style-type: none;
+  font-size: 32px;
+  background-color: white;
+}
+
+details > summary > span {
+  margin: 0 20px;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  border: 0;
+  background-color: var(--dark-color);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--dark-bg-color);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--dark-bg-color);
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-container > div {
+  margin: 4px;
+  padding: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-button {
+  padding: 0 16px;
+  font-size: 32px;
+  float: right;
 }
